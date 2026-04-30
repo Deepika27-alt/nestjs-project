@@ -7,7 +7,7 @@ export class TasksService {
     getAllTasks() {
         return this.tasks;
     }
-    createTask(task: CreateTaskDto) {
+    async createTask(task: CreateTaskDto) {
         const newTask = {
             id: this.tasks.length + 1,
             title: task.title,
